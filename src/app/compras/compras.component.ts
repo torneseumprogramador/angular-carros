@@ -10,7 +10,7 @@ export class ComprasComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  private REST_API_SERVER = "http://localhost:3001/pedidos.json";
+  private REST_API_SERVER = "https://api-monolitico-para-angular.herokuapp.com/pedidos.json";
 
   public pedidos = []
 

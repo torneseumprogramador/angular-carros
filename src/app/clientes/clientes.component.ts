@@ -10,7 +10,7 @@ export class ClientesComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  private REST_API_SERVER = "http://localhost:3002/clientes.json";
+  private REST_API_SERVER = "https://api-monolitico-para-angular.herokuapp.com/clientes.json";
 
   public clientes = []
 
