@@ -1,0 +1,14 @@
+<hr>
+<h1>Carros</h1>
+<table class="table">
+	<tr>
+		<th>Nome</th>
+		<th>Marca</th>
+		<th>Valor</th>
+	</tr>
+	<tr *ngFor="let carro of carros">
+		<td>{{carro.nome}}</td>
+		<td>{{carro.marca}}</td>
+		<td>{{carro.valor}}</td>
+	</tr>
+</table>

@@ -1,0 +1,12 @@
+<hr>
+<h1>Compras</h1>
+<table class="table">
+	<tr>
+		<th>Nome</th>
+		<th>Telefone</th>
+	</tr>
+	<tr *ngFor="let pedido of pedidos">
+		<td>{{pedido.id_cliente}}</td>
+		<td>{{pedido.id_carro}}</td>
+	</tr>
+</table>

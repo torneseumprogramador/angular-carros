@@ -1,0 +1,12 @@
+<hr>
+<h1>Clientes</h1>
+<table class="table">
+	<tr>
+		<th>Nome</th>
+		<th>Telefone</th>
+	</tr>
+	<tr *ngFor="let cliente of clientes">
+		<td>{{cliente.nome}}</td>
+		<td>{{cliente.telefone}}</td>
+	</tr>
+</table>
