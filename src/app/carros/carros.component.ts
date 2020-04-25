@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import{ GlobalConstants } from '../global-constants';
 
 @Component({
   selector: 'app-carros',
@@ -10,7 +11,7 @@ export class CarrosComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  private REST_API_SERVER = "https://api-monolitico-para-angular.herokuapp.com/carros.json";
+  private REST_API_SERVER = `${GlobalConstants.HOST}/carros.json`
 
   public carros = []
 

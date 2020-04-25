@@ -1,12 +1,11 @@
+<app-navigator></app-navigator>
+
 <div class="content" role="main">
-  <div class="card highlight-card card-small">
-    <span>{{ title }}</span>
-  </div>
+   <h1>{{ title }}</h1>
 </div>
 
 <router-outlet></router-outlet>
 
-<app-compras></app-compras>
-<app-clientes></app-clientes>
-<app-carros></app-carros>
-
+<div class="container">
+	<app-clientes></app-clientes>
+</div>
