@@ -11,12 +11,10 @@ export class ComprasComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  private REST_API_SERVER = `${GlobalConstants.HOST}/pedidos.json`
-
   public pedidos = []
 
   ngOnInit(): void {
-  	this.http.get(this.REST_API_SERVER).subscribe((data: any[])=>{
+  	this.http.get(`${GlobalConstants.HOST}/pedidos.json`).subscribe((data: any[])=>{
       this.pedidos = data;
     });
   }

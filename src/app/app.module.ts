@@ -11,7 +11,6 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { ComprasComponent } from './compras/compras.component';
 import { NavigatorComponent } from './navigator/navigator.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,14 +25,14 @@ import { NavigatorComponent } from './navigator/navigator.component';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
+      { path: '', component: ClientesComponent },
       { path: 'compras', component: ComprasComponent },
+      { path: 'carros', component: CarrosComponent },
     ])
   ],
   providers: [],
   bootstrap: [
     AppComponent, 
-    ClientesComponent, 
-    NavigatorComponent
   ]
 })
 export class AppModule { }

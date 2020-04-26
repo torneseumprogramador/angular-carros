@@ -9,6 +9,15 @@ export class NavigatorComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    this.q = urlParams.get('q')
   }
 
+  public q;
+
+  public buscar(){
+  	if(!this.q) this.q = "";
+  	window.location.href = `?q=${this.q}`
+  }
 }

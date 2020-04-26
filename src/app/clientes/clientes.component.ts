@@ -49,7 +49,11 @@ export class ClientesComponent implements OnInit {
   }
 
   public loadClients(){
-    this.http.get(`${GlobalConstants.HOST}/clientes.json`).subscribe((data: any[])=>{
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    let q = urlParams.get('q')
+    if(!q) q = ""
+    this.http.get(`${GlobalConstants.HOST}/clientes.json?q=${q}`).subscribe((data: any[])=>{
       this.clientes = data
     })
   }
