@@ -10,6 +10,7 @@ import { CarrosComponent } from './carros/carros.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ComprasComponent } from './compras/compras.component';
 import { NavigatorComponent } from './navigator/navigator.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavigatorComponent } from './navigator/navigator.component';
     CarrosComponent,
     ClientesComponent,
     ComprasComponent,
-    NavigatorComponent
+    NavigatorComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,7 @@ import { NavigatorComponent } from './navigator/navigator.component';
       { path: '', component: ClientesComponent },
       { path: 'compras', component: ComprasComponent },
       { path: 'carros', component: CarrosComponent },
+      { path: '**', component: NotFoundComponent },
     ])
   ],
   providers: [],
